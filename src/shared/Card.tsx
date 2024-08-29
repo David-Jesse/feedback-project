@@ -1,24 +1,17 @@
-import React from "react";
+import type { FunctionComponent } from "preact";
 
-
-type Props = {
-    children: React.ReactNode;
-    reverse: boolean;
-}
-
-const Card = ({children, reverse}: Props) => {
-//   return (
-//     <div className={`card ${reverse && 'reverse'}`}>{children}</div>
-//   )
-
-    return (
-        <div className='card' style={{
-            backgroundColor: reverse ? 'rgba(0,0,0,0.4' : '#fff',
-            color: reverse ? '#fff' : '#000'
-        }}>
-            {children}
-        </div>
-    )
-}
+const Card: FunctionComponent<{
+    reverse?: boolean}> = ({children, reverse}) => {
+        return (
+            <div className={`card ${reverse ? 'reverse' : ''}`}
+                style={{
+                    backgroundColor: reverse ? 'rgba(0,0,0,0.4)' : '#fff',
+                    color: reverse ? '#fff' : '#000'
+                }}
+            >
+                {children}
+            </div>
+        )
+    }
 
 export default Card;

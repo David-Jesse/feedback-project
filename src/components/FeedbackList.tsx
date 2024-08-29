@@ -4,10 +4,10 @@ import FeedbackItem from './FeedbackItem'
 
 type Props = {
   feedback: feedbackData  
-  handleDelete: Function 
+  handleDelete: any 
 }
 
-const FeedbackList = ({ feedback, handleDelete }: Props) => {
+const FeedbackList = ({ feedback, handleDelete}: Props) => {
     console.log(feedback)
   return (
     <div className='feedback-list'>

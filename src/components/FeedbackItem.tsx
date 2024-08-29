@@ -5,13 +5,10 @@ import Card from '../shared/Card';
 
 type Props = {
   item: feedbackData;
+  handleDelete: Function 
 }
 
 const FeedbackItem = ({item, handleDelete}: Props) => {
-
-  const handleClick = ({id}) => {
-    console.log(id)
-  }
   return (
     <Card>
       <div className='num-display'>{item.rating}</div>
