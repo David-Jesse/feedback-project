@@ -1,6 +1,6 @@
-import { feedbackData } from "../shared/Types";
+import { FeedbackData } from "../shared/Types";
 
-const FeedbackData: Array<feedbackData> =  [
+const FeedDataback: Array<FeedbackData> =  [
     {
         id: 1,
         rating: 10,
@@ -18,4 +18,4 @@ const FeedbackData: Array<feedbackData> =  [
       },
 ]
 
-export default FeedbackData;
+export default FeedDataback;

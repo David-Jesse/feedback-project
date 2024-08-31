@@ -1,17 +1,17 @@
-import { feedbackData } from "../shared/Types";
+import { FeedbackData } from "../shared/Types";
 
 type Props = {
-    feedback: feedbackData;
-    acc: number;
-    cur: number;
+    feedback: Array<FeedbackData>;
 }
 
-const FeedbackStats = ({feedback, acc, cur}: Props) => { 
+const FeedbackStats = ({feedback}: Props) => { 
   // Calculate readings average
-  const average = feedback.reduce((acc, cur) => {
+  let average = feedback.reduce((acc, cur) => {
     return acc + cur.rating 
   }, 0) / feedback.length
 
+
+  average.toFixed(1).replace(/[.,]0$/, '')
 
   return (
     <div className='feedback-stats'>

@@ -4,7 +4,7 @@ export interface ClassType {
     text: string;
 }
 
-export interface feedbackData {
+export interface FeedbackData {
     id: number;
     rating: number;
     text: string;

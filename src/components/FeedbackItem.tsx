@@ -1,10 +1,10 @@
-import { feedbackData } from '../shared/Types';
+import { FeedbackData } from '../shared/Types';
 import {FaTimes} from 'react-icons/fa';
 import Card from '../shared/Card';
 
 
 type Props = {
-  item: feedbackData;
+  item: FeedbackData;
   handleDelete: Function 
 }
 

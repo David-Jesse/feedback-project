@@ -2,7 +2,7 @@ import './styles/main.scss';
 import Header from './components/Header';
 import FeedbackList from './components/FeedbackList';
 import { useState } from 'preact/hooks';
-import FeedbackData from './data/FeedbackData';
+import FeedbackData from './data/FeedDataBack';
 import FeedbackStats from './components/FeedbackStats';
 
 export function App() {
