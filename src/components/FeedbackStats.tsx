@@ -10,7 +10,6 @@ const FeedbackStats = ({feedback}: Props) => {
     return acc + cur.rating 
   }, 0) / feedback.length
 
-
   average.toFixed(1).replace(/[.,]0$/, '')
 
   return (
