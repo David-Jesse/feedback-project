@@ -1,6 +1,8 @@
 import {AnimatePresence, motion} from 'framer-motion';
 import { FeedbackData } from '../shared/Types'
 import FeedbackItem from './FeedbackItem'
+import { useContext } from 'react';
+import FeedbackContext from '../context/FeedbackContext';
 
 type Props = {
   feedback: Array<FeedbackData>  
@@ -8,6 +10,7 @@ type Props = {
 }
 
 const FeedbackList = ({ feedback, handleDelete}: Props) => {
+  const {} = useContext(FeedbackContext)
   if (!feedback || feedback.length === 0) {
     return <p>No Feedback Yet</p>
   }
