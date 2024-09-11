@@ -1,9 +1,16 @@
-import { useState } from "preact/hooks"
+import { useState, useContext, useEffect } from "preact/hooks"
+import FeedbackContext from "../context/FeedbackContext"
 
 type Props = {select: Function}
 
 const RatingSelect = ({select}: Props) => {
     const [selected, setSelected] = useState(10)
+
+    const {feedbackEdit} = useContext(FeedbackContext)
+
+    useEffect(() => {
+        setSelected(feedbackEdit.item.rating)
+    }, [feedbackEdit])
 
     const handleChange = (e: any) => {
         setSelected(+e.currentTarget.value)

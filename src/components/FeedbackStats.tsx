@@ -1,16 +1,17 @@
-import { FeedbackData } from "../shared/Types";
+import { useContext } from "preact/hooks";
+import FeedbackContext from "../context/FeedbackContext";
 
-type Props = {
-    feedback: Array<FeedbackData>;
-}
+// type Props = {
+//     feedback: Array<FeedbackData>;
+// }
 
-const FeedbackStats = ({feedback}: Props) => { 
+const FeedbackStats = () => { 
+  const {feedback} = useContext(FeedbackContext)
   // Calculate readings average
   let average = feedback.reduce((acc, cur) => {
     return acc + cur.rating 
   }, 0) / feedback.length
-
-  average.toFixed(1).replace(/[.,]0$/, '')
+ average.toFixed(1).replace(/[.,]0$/, '')
 
   return (
     <div className='feedback-stats'>
